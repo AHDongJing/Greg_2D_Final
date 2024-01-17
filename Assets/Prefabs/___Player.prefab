@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4774969515893554130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 6121486398239981051}
   - component: {fileID: 8743057644621736323}
   - component: {fileID: 3265864324461779832}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: ___Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,9 +112,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 775299669
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1010264561
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7b8cfb375c1dd3f4fb6e3ad7622ad650, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -226,8 +226,8 @@ MonoBehaviour:
   jumpAmountMax: 2
   jumpAmount: 0
   speed: 300
-  jumpForce: 16.5
-  wallJumpForce: 10
+  jumpForce: 13
+  wallJumpForce: 8
   slideDistance: 4.5
   slideSpeed: 0.3
   slidePowerCost: 5
@@ -260,7 +260,7 @@ MonoBehaviour:
   checkRaduis: 0.1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   isGround: 1
   touchLeftWall: 0
   touchRightWall: 1
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 7830584206490306747}
   - component: {fileID: 1103170256834722003}
   - component: {fileID: 5181331673943799715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 6996519487432779883}
   - component: {fileID: 7577282668643154839}
   - component: {fileID: 5153645263627391396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 5131542225734277605}
   - component: {fileID: 2375722528848927469}
   - component: {fileID: 8654670372118572558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

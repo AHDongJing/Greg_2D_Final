@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 775299669
-  m_SortingLayer: 0
+  m_SortingLayerID: 1010264561
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 727606671, guid: a7918557fd4a24504bf4184ce00f605e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -229,7 +229,7 @@ MonoBehaviour:
   checkDistance: 4
   attackLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   waitTime: 2
   waitTimeCounter: 0
   wait: 0
