@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 6457667266572748293}
   - component: {fileID: 4555019424997565702}
   - component: {fileID: 4268557292761895921}
-  - component: {fileID: 8697969684842704029}
   - component: {fileID: 7528885237445646750}
   - component: {fileID: 571246831133307667}
+  - component: {fileID: 6801077971533493713}
+  - component: {fileID: 8306783240044134064}
   m_Layer: 8
   m_Name: Boar
   m_TagString: Untagged
@@ -297,21 +298,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8697969684842704029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7436783608261809898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f76d53861e5149ff9d01eda8bc2a633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 30
-  attackRange: 0
-  attackRate: 0
 --- !u!114 &7528885237445646750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +320,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isGround: 1
-  touchLeftWall: 0
+  touchLeftWall: 1
   touchRightWall: 0
   onWall: 0
 --- !u!114 &571246831133307667
@@ -372,3 +358,30 @@ MonoBehaviour:
   wait: 0
   lostTime: 3
   lostTimeCounter: 0
+--- !u!114 &6801077971533493713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436783608261809898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03994c5d4f6f84479b401610949eb0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8306783240044134064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436783608261809898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a60383954484630bc5280268122853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  attackRange: 1
+  attackRate: 1

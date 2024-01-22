@@ -56,5 +56,15 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Grad_2D_URP.sln"
+    "dotnet.defaultSolution": "Grad_2D_URP.sln",
+    "dotnetAcquisitionExtension.existingDotnetPath": [
+        {
+            "extensionId": "visualstudiotoolsforunity.vstuc",
+            "path": "/usr/local/share/dotnet/dotnet"
+        },
+        {
+            "extensionId": "ms-dotnettools.csharp",
+            "path": "/usr/local/share/dotnet/dotnet"
+        },
+    ]
 }

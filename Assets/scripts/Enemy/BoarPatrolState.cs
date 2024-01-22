@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.DualShock;
 
 //通过抽象类继承而来的野猪巡逻方法
 public class BoarPatrolState : BaseState

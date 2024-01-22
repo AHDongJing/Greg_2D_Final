@@ -15,15 +15,16 @@ GameObject:
   - component: {fileID: 2738612619642204586}
   - component: {fileID: 631985296526373637}
   - component: {fileID: 8367588779559140129}
-  - component: {fileID: 4816339323909792028}
   - component: {fileID: 6798364734469898221}
+  - component: {fileID: 1443140630422859657}
+  - component: {fileID: -1380198253706952846}
   m_Layer: 8
   m_Name: Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &255333311442274521
 Transform:
   m_ObjectHideFlags: 0
@@ -236,21 +237,6 @@ MonoBehaviour:
   lostTime: 3
   lostTimeCounter: 0
   patrolRadius: 3.5
---- !u!114 &4816339323909792028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267117098306704056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f76d53861e5149ff9d01eda8bc2a633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  attackRange: 1
-  attackRate: 1
 --- !u!114 &6798364734469898221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +314,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1443140630422859657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267117098306704056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03994c5d4f6f84479b401610949eb0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1380198253706952846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267117098306704056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a60383954484630bc5280268122853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  attackRange: 0.3
+  attackRate: 1
 --- !u!1 &1237221429897631469
 GameObject:
   m_ObjectHideFlags: 0

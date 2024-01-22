@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //isHurt不为true并且非攻击状态下的时候才可以执行移动
-        if (!isHurt && !isAttack)
+        if (!isHurt && !isAttack && !isSlide)
         {
             Move();
         }
@@ -172,6 +172,7 @@ public class PlayerController : MonoBehaviour
         //人物不处于下蹲时才可以移动，isCrouch为false时执行移动操作,同时不处于蹬墙跳时才能施加移动的力
         if (!isCrouch && !wallJump)
         {
+            Debug.Log("aaa");
             //velocity改变刚体的线性速度通过vector2向量(传参为输入的移动值inputDirection)，创建人物输入方向和速度给到人物的刚体用来控制移动
             rb.velocity = new Vector2(inputDirection.x * speed * Time.deltaTime, rb.velocity.y/*维持原有的Y轴重力-9.81*/);
         }
@@ -192,7 +193,7 @@ public class PlayerController : MonoBehaviour
         //人物下蹲,当人物的y轴为负数的时候（按S的时候Y轴为负数）并且人物没有离地，isGround为true的时候，isCrouch为true；
         isCrouch = inputDirection.y < -0.5f && phisycsCheck.isGround;
 
-        if (isCrouch)
+        if (isCrouch || isSlide)
         {
             //isCrouch为true时人物下蹲时新建一个offset和size的值让碰撞体跟随缩小
             coll.offset = new Vector2(-0.05f, 0.85f);

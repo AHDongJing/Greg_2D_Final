@@ -2,7 +2,72 @@ fileFormatVersion: 2
 guid: 7586ab03de3c9f4449af44fb5cab61e6
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Appear
+    second: {fileID: 7400000, guid: dc382d777dedb463ea843ae5b44ed2d8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Death
+    second: {fileID: 7400000, guid: 5d3561bfcf0954373831554d49ca22ad, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hit
+    second: {fileID: 7400000, guid: 7d7f00e1789eb4fa79e5e984084bf1aa, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle Low
+    second: {fileID: 7400000, guid: 2c44f1d5b4b474a44b3fa5a11577b328, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Move
+    second: {fileID: 7400000, guid: e3f6d69cc4ccb44008fcba1457d0428b, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Move Attack
+    second: {fileID: 7400000, guid: d9cd52f8e3a8a4d65b06f0040dc665a8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Move Attack prep
+    second: {fileID: 7400000, guid: ff67ce02a0f774a9b998c5319d6ae174, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Return To Idle
+    second: {fileID: 7400000, guid: fc202e0d9be864824bccfd56b0de7a22, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Start moving
+    second: {fileID: 7400000, guid: a8f29243d9e0a413db088adb7976accd, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Stationary attack
+    second: {fileID: 7400000, guid: ecb84cb6f3b6445059e97b338437bc01, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Stop Moving After Attack
+    second: {fileID: 7400000, guid: 3e500346faa7e421787b80a55c0b03fa, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Stop moving
+    second: {fileID: 7400000, guid: f443a6d7fed4d4e5fa64470e1af1ba19, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Vanish
+    second: {fileID: 7400000, guid: 08989edef91a5443b954fcec3382b2b1, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -95,7 +160,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638413890899906910
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -179,7 +244,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 232, y: 143}
-  - name: The Heart Hoarder_Frame_3
+  - name: hurt1
     originalName: 
     pivot: {x: 0.5, y: -0.016949154}
     alignment: 9
@@ -1459,7 +1524,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 308, y: 211}
-  - name: The Heart Hoarder_Frame_96
+  - name: hurt4
     originalName: 
     pivot: {x: 0.5, y: -0.068965524}
     alignment: 9
@@ -1479,7 +1544,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 384, y: 211}
-  - name: The Heart Hoarder_Frame_97
+  - name: hurt3
     originalName: 
     pivot: {x: 0.5, y: -0.06779662}
     alignment: 9
@@ -1499,7 +1564,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 384, y: 143}
-  - name: The Heart Hoarder_Frame_98
+  - name: hurt2
     originalName: 
     pivot: {x: 0.5, y: -0.06779662}
     alignment: 9
@@ -1959,7 +2024,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 928, y: 4}
-  - name: The Heart Hoarder_Frame_11
+  - name: Attack1_4
     originalName: 
     pivot: {x: 0.47928998, y: 0}
     alignment: 9
@@ -1979,7 +2044,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 628, y: 99}
-  - name: The Heart Hoarder_Frame_12
+  - name: Attack1_3
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -2079,7 +2144,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 694, y: 55}
-  - name: The Heart Hoarder_Frame_17
+  - name: Attack1_1
     originalName: 
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
@@ -2099,7 +2164,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 99}
-  - name: The Heart Hoarder_Frame_18
+  - name: Attack1_2
     originalName: 
     pivot: {x: 0.49999997, y: 0}
     alignment: 9
@@ -2939,7 +3004,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 915, y: 664}
-  - name: The Heart Hoarder_Frame_150
+  - name: dead1
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -2959,7 +3024,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 719}
-  - name: The Heart Hoarder_Frame_151
+  - name: dead2
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -2979,7 +3044,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 62, y: 719}
-  - name: The Heart Hoarder_Frame_152
+  - name: dead3
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -2999,7 +3064,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 120, y: 719}
-  - name: The Heart Hoarder_Frame_153
+  - name: dead4
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -3019,7 +3084,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 178, y: 719}
-  - name: The Heart Hoarder_Frame_154
+  - name: dead5
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -3039,7 +3104,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 236, y: 719}
-  - name: The Heart Hoarder_Frame_155
+  - name: dead6
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -3059,7 +3124,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 294, y: 719}
-  - name: The Heart Hoarder_Frame_156
+  - name: dead7
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -3079,7 +3144,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 352, y: 719}
-  - name: The Heart Hoarder_Frame_157
+  - name: dead8
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -3099,7 +3164,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 410, y: 719}
-  - name: The Heart Hoarder_Frame_158
+  - name: dead9
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -3119,7 +3184,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 468, y: 719}
-  - name: The Heart Hoarder_Frame_159
+  - name: dead10
     originalName: 
     pivot: {x: 0.48, y: 0}
     alignment: 9
@@ -3199,7 +3264,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 856, y: 719}
-  - name: The Heart Hoarder_Frame_163
+  - name: dead11
     originalName: 
     pivot: {x: 0.5217391, y: 0}
     alignment: 9
@@ -3259,7 +3324,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 973, y: 664}
-  - name: The Heart Hoarder_Frame_166
+  - name: dead12
     originalName: 
     pivot: {x: 0.5217391, y: 0}
     alignment: 9
@@ -3279,7 +3344,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 339, y: 664}
-  - name: The Heart Hoarder_Frame_167
+  - name: dead13
     originalName: 
     pivot: {x: 0.5217391, y: 0}
     alignment: 9
@@ -3299,7 +3364,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 225, y: 664}
-  - name: The Heart Hoarder_Frame_168
+  - name: dead14
     originalName: 
     pivot: {x: 0.5217391, y: 0}
     alignment: 9
@@ -3339,7 +3404,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 910, y: 719}
-  - name: The Heart Hoarder_Frame_87
+  - name: dead15
     originalName: 
     pivot: {x: 0.48148143, y: 0}
     alignment: 9
@@ -3379,7 +3444,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 878}
-  - name: The Heart Hoarder_Frame_89
+  - name: dead16
     originalName: 
     pivot: {x: 0.55555546, y: -0.032786887}
     alignment: 9
@@ -4806,7 +4871,67 @@ ScriptedImporter:
       spriteId: 885a693e0adff564c80b8241a3a61032
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 222, y: 119}

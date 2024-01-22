@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 988532324824849748}
   - component: {fileID: 3816526849584554433}
   - component: {fileID: 6591225586497215801}
-  - component: {fileID: 5327076565130135420}
+  - component: {fileID: 3173392522685512734}
+  - component: {fileID: 1167523727527235580}
   m_Layer: 8
   m_Name: Snail
   m_TagString: Untagged
@@ -357,7 +358,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5327076565130135420
+--- !u!114 &3173392522685512734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,9 +367,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 7330752738737093449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f76d53861e5149ff9d01eda8bc2a633, type: 3}
+  m_Script: {fileID: 11500000, guid: 03994c5d4f6f84479b401610949eb0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+--- !u!114 &1167523727527235580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7330752738737093449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a60383954484630bc5280268122853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
   attackRange: 0
   attackRate: 0

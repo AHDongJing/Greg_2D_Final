@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Ground
   - Water
+  - Stairs
+  - SwordDismiss
+  - Boss
   layers:
   - Default
   - TransparentFX

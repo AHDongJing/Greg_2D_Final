@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
 
 
     //当前状态
-    private BaseState currentState;
+    protected BaseState currentState;
 
     //创建一个baseState的类型（巡逻状态），来调用重写的方法
     protected BaseState patrolState;
@@ -74,6 +74,10 @@ public class Enemy : MonoBehaviour
 
     protected BaseState skillState;
 
+    public BaseState GetCurrentState()
+    {
+        return currentState;
+    }
     // //追击状态（抽象类重写）
     // protected BaseState cheseState;
 
@@ -90,6 +94,7 @@ public class Enemy : MonoBehaviour
 
         //蜜蜂出生点(游戏运行时摆放的位置就是蜜蜂的出生点)
         spwanPoint = transform.position;
+
     }
 
     //周期状态（物体被激活时加载）
@@ -98,7 +103,7 @@ public class Enemy : MonoBehaviour
         //游戏开始时怪物进入巡逻状态
         currentState = patrolState;
         //执行巡逻一开始的函数方法并传递一个当前的enmey(把自己传递进去方便抽象类调用)
-        currentState.OnEnter(this);
+        currentState?.OnEnter(this);
     }
     private void Update()
     {
@@ -106,25 +111,30 @@ public class Enemy : MonoBehaviour
         //获得面朝方向通过transfrom.localScale.x的值 负数面朝右边正数面朝左边
         faceDir = new Vector3(-transform.localScale.x, 0, 0);
         //当前状态下持续执行逻辑循环判断
-        currentState.LogicUpdate();
+        currentState?.LogicUpdate();
         //调用计时器
         TimeCounter();
+        HandlerDir();
+    }
+    public virtual void HandlerDir()
+    {
+
     }
 
     private void FixedUpdate()
     {
         //没有受伤或死亡或等待的时候才能执行移动方法
-        if (!isHurt && !isHurt && !wait)
+        if (!isHurt && !isDead && !wait)
         {
             //刚体移动
             Move();
         }
         //执行物理逻辑方法的内容
-        currentState.PhysicsUpdate();
+        currentState?.PhysicsUpdate();
     }
 
     //物体消失时执行一次的方法
-    private void Ondisable()
+    private void OnDisable()
     {
         //执行退出方法
         currentState.OnExit();
@@ -189,7 +199,9 @@ public class Enemy : MonoBehaviour
                 //计时器时间修正
                 waitTimeCounter = waitTime;
                 //就进行反转改变transform.localScale.x的值 -1是面朝右边 正数是面朝左边
-                transform.localScale = new Vector3(faceDir.x, 0.5f, 0.5f);
+                transform.localScale = new Vector3(-transform.localScale.x, 0.5f, 0.5f);
+
+
             }
         }
         //如果没有检测到敌人
@@ -200,7 +212,7 @@ public class Enemy : MonoBehaviour
     }
 
     //接受攻击
-    public void OnTakeDamage(Transform attackTrans)
+    public virtual void OnTakeDamage(Transform attackTrans)
     {
         //记录传参进来的攻击者
         attacker = attackTrans;
@@ -233,24 +245,30 @@ public class Enemy : MonoBehaviour
     {
         //使用刚体的addforce添加一个dir方向的impulse冲击力  hurtforce为冲击力值在unity中添加
         rb.AddForce(dir * hurtForce, ForceMode2D.Impulse);
+
         //等待0.5秒后执行下一帧
         yield return new WaitForSeconds(0.5f);
         isHurt = false;
     }
 
     //死亡方法
-    public void OnDie()
+    public virtual void OnDie()
     {
+        if (isDead)
+        {
+            return;
+        }
         //死亡的第一时间把碰撞体的涂层改为编号为2的层，然后在Edit -> project setting -> physis 2d -> layercollision matrix中修改碰撞图层
         gameObject.layer = 2;
         //执行死亡动画
         anim.SetBool("dead", true);
         //为true时死亡
         isDead = true;
+
     }
 
     //动画结束后销毁怪物
-    public void DestroyAfterAnimation()
+    public virtual void DestroyAfterAnimation()
     {
         //死亡后直接销毁自身
         Destroy(this.gameObject);

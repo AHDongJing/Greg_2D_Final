@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BoarChaseState : BaseState
 {
-
-
     public override void OnEnter(Enemy enemy)
     {
         currentEnemy = enemy;
