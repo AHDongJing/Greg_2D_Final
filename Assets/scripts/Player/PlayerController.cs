@@ -172,7 +172,6 @@ public class PlayerController : MonoBehaviour
         //人物不处于下蹲时才可以移动，isCrouch为false时执行移动操作,同时不处于蹬墙跳时才能施加移动的力
         if (!isCrouch && !wallJump)
         {
-            Debug.Log("aaa");
             //velocity改变刚体的线性速度通过vector2向量(传参为输入的移动值inputDirection)，创建人物输入方向和速度给到人物的刚体用来控制移动
             rb.velocity = new Vector2(inputDirection.x * speed * Time.deltaTime, rb.velocity.y/*维持原有的Y轴重力-9.81*/);
         }
