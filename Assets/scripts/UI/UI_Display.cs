@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//后期添加到UI manager 中
 public class UI_Display : MonoBehaviour
 {
     public Slider slider;

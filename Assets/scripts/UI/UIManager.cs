@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    //写单例
+
     //用于把血量百分比传递进去,在hierarchy直接把playerStatBar物体拖进去
     public PlayerStatBar playerStatBar;
+    //死亡时的UI
+    public PlayerDie_UI playerDieUI; 
 
     [Header("事件监听")]
     public CharacterEventSO healthEvent;
@@ -16,6 +20,7 @@ public class UIManager : MonoBehaviour
     {
         //订阅事件把对应的函数加到这个订阅中
         healthEvent.OnEventRaised += OnHealthEvent;
+        
     }
 
     //取消事件
@@ -24,7 +29,9 @@ public class UIManager : MonoBehaviour
         //把对应的函数在订阅中取消
         healthEvent.OnEventRaised -= OnHealthEvent;
     }
+
     //广播执行对应的方法
+    //添加和角色health 有关的方法
     private void OnHealthEvent(Character character)
     {
         //血量百分比，当前血量/最大血量
@@ -33,5 +40,12 @@ public class UIManager : MonoBehaviour
         playerStatBar.OnHealthChange(persentage);
         //把能量条传递给接收方法
         playerStatBar.OnPowerChange(character);
+    }
+
+    //死亡时打开死亡UI
+    public void OnDieEvent()
+    { 
+        //打开角色死亡时候的UI
+        playerDieUI.gameObject.SetActive(true);
     }
 }
