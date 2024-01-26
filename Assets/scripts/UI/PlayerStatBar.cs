@@ -9,12 +9,11 @@ public class PlayerStatBar : MonoBehaviour
 
     //能量条,idle 一段时间会回复
     public Slider powerBar;
-
-    //manaPoint
-    //杀死一个怪物可以获得1点，用来激活天赋
+    //Mana point
 
     //是否恢复能量值
     private bool isRecovering;
+
     //临时变量保存传递进来的character
     private Character currentCharacter;
 

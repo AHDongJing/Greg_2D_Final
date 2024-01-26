@@ -134,4 +134,5 @@ public class Character : MonoBehaviour
         //把自己传递到监听，用来执行能量变更
         onHealthChange?.Invoke(this);
     }
+
 }

@@ -12,6 +12,7 @@ TagManager:
   - Stairs
   - SwordDismiss
   - Boss
+  - Portal
   layers:
   - Default
   - TransparentFX

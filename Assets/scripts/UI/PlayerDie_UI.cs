@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDie_UI : MonoBehaviour
 {
-    //调用动画组件
-    private Animator anim;
+    //重新开始游戏按钮
+    public Button restartBtn;
+    //推出游戏按钮
+    public Button exitBtn;
     // Start is called before the first frame update
     private void OnEnable()
     {
-        //得到本身的animator 组件
-        anim = transform.Find("Image").GetComponent<Animator>();
         //执行开始方法
         OnOpen();
+        //restart 按钮事件
+        restartBtn.onClick.AddListener(GameManager.Instance.RestartGame);
+        //exit 按钮事件
+        exitBtn.onClick.AddListener(GameManager.Instance.ExitGame);
     }
     void Start()
     {
@@ -25,10 +30,16 @@ public class PlayerDie_UI : MonoBehaviour
         
     }
 
-    //当UI打开时执行
+    //需要在UI打开时执行的方法
     void OnOpen() 
     {
-        //在UI 中播放死亡动画
-        anim.SetBool("isDead", true);
+        Debug.Log("OPEN");
     }
+
+    private void OnDisable()
+    {
+        restartBtn.onClick.RemoveAllListeners();
+        exitBtn.onClick.RemoveAllListeners();
+    }
+
 }
