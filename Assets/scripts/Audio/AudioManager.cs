@@ -12,7 +12,6 @@ public class AudioManager : MonoBehaviour
     public PlayAudioEventSO BGMEvent;
     public PlayAudioEventSO JumpEvent;
 
-
     [Header("组件")]
     //背景音乐变量
     public AudioSource BGMSource;
@@ -28,7 +27,6 @@ public class AudioManager : MonoBehaviour
         FXEvent.OnEventRaised += OnFXEvent;
         BGMEvent.OnEventRaised += OnBGMEvent;
         JumpEvent.OnEventRaised += OnJumpEvent;
-
     }
 
     private void OnDisable()
@@ -64,4 +62,6 @@ public class AudioManager : MonoBehaviour
         //单次播放音频
         JumpSource.Play();
     }
+
+
 }

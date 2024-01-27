@@ -13,11 +13,11 @@ public class AudioDefination : MonoBehaviour
 
     private void OnEnable()
     {
-        //游戏启动是如果 playOnEnable为true
+        //游戏启动时如果 playOnEnable为true
         if (playOnEnable)
         {
             //播放音乐
-            // PlayAudioClip();
+            PlayAudioClip();
         }
     }
 
