@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     [Header("事件监听")]
     public PlayAudioEventSO FXEvent;
     public PlayAudioEventSO BGMEvent;
+    public PlayAudioEventSO JumpEvent;
+
 
     [Header("组件")]
     //背景音乐变量
@@ -17,18 +19,23 @@ public class AudioManager : MonoBehaviour
     //攻击音乐变量
     public AudioSource FXSource;
 
+    public AudioSource JumpSource;
+
 
     private void OnEnable()
     {
         //函数注册到事件启动中
         FXEvent.OnEventRaised += OnFXEvent;
         BGMEvent.OnEventRaised += OnBGMEvent;
+        JumpEvent.OnEventRaised += OnJumpEvent;
+
     }
 
     private void OnDisable()
     {
         FXEvent.OnEventRaised -= OnFXEvent;
         BGMEvent.OnEventRaised -= OnBGMEvent;
+        JumpEvent.OnEventRaised -= OnJumpEvent;
     }
 
     //bgm音频
@@ -47,5 +54,14 @@ public class AudioManager : MonoBehaviour
         FXSource.clip = clip;
         //单次播放音频
         FXSource.Play();
+    }
+
+    //跳跃音频
+    private void OnJumpEvent(AudioClip clip)
+    {
+        //要播放的片段是事件传递进来的片段
+        JumpSource.clip = clip;
+        //单次播放音频
+        JumpSource.Play();
     }
 }
