@@ -71,6 +71,15 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Open_Buff"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd971ed5-4af3-412b-9fef-99f29b7824ce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -247,6 +256,17 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Slide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf999389-3958-4084-8b14-6830a01ee247"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Open_Buff"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -839,6 +859,7 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
         m_Gameplayer_WalkButton = m_Gameplayer.FindAction("WalkButton", throwIfNotFound: true);
         m_Gameplayer_Attack = m_Gameplayer.FindAction("Attack", throwIfNotFound: true);
         m_Gameplayer_Slide = m_Gameplayer.FindAction("Slide", throwIfNotFound: true);
+        m_Gameplayer_Open_Buff = m_Gameplayer.FindAction("Open_Buff", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -917,6 +938,7 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplayer_WalkButton;
     private readonly InputAction m_Gameplayer_Attack;
     private readonly InputAction m_Gameplayer_Slide;
+    private readonly InputAction m_Gameplayer_Open_Buff;
     public struct GameplayerActions
     {
         private @PlayerinputControl m_Wrapper;
@@ -926,6 +948,7 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
         public InputAction @WalkButton => m_Wrapper.m_Gameplayer_WalkButton;
         public InputAction @Attack => m_Wrapper.m_Gameplayer_Attack;
         public InputAction @Slide => m_Wrapper.m_Gameplayer_Slide;
+        public InputAction @Open_Buff => m_Wrapper.m_Gameplayer_Open_Buff;
         public InputActionMap Get() { return m_Wrapper.m_Gameplayer; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -950,6 +973,9 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
             @Slide.started += instance.OnSlide;
             @Slide.performed += instance.OnSlide;
             @Slide.canceled += instance.OnSlide;
+            @Open_Buff.started += instance.OnOpen_Buff;
+            @Open_Buff.performed += instance.OnOpen_Buff;
+            @Open_Buff.canceled += instance.OnOpen_Buff;
         }
 
         private void UnregisterCallbacks(IGameplayerActions instance)
@@ -969,6 +995,9 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
             @Slide.started -= instance.OnSlide;
             @Slide.performed -= instance.OnSlide;
             @Slide.canceled -= instance.OnSlide;
+            @Open_Buff.started -= instance.OnOpen_Buff;
+            @Open_Buff.performed -= instance.OnOpen_Buff;
+            @Open_Buff.canceled -= instance.OnOpen_Buff;
         }
 
         public void RemoveCallbacks(IGameplayerActions instance)
@@ -1156,6 +1185,7 @@ public partial class @PlayerinputControl: IInputActionCollection2, IDisposable
         void OnWalkButton(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnSlide(InputAction.CallbackContext context);
+        void OnOpen_Buff(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

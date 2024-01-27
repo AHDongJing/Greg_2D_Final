@@ -132,10 +132,12 @@ public class PlayerController : MonoBehaviour
 
         //滑铲
         inputcontrol.Gameplayer.Slide.started += Slide;
+
+        //打开buff ui
+        inputcontrol.Gameplayer.Open_Buff.started += OpenBuffUI;
     }
 
-
-
+  
     //当前物体被启动时，inputcontrol也启动 （物体启动 inspector中勾选物体）
     private void OnEnable()
     {
@@ -206,6 +208,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //打开buff ui
+    private void OpenBuffUI(InputAction.CallbackContext context)
+    {
+
+        UIManager.Instance.OnBuffEvent();
+    }
+        
 
     //跳跃方法
     private void Jump(InputAction.CallbackContext context)
