@@ -44,13 +44,12 @@ public class BossChaseState : BaseState
         attackRateCounter -= Time.deltaTime;
         //获取当前npc坐标的位置
         target = new Vector3(currentEnemy.attacker.position.x, 0, 0);
-        Debug.Log("bbb");
         // Debug.Log("isattak");
         // Debug.Log(Mathf.Abs(target.x - currentEnemy.transform.position.x));
         //判断攻击距离(满足X轴的攻击距离)
         if (Mathf.Abs(target.x - currentEnemy.transform.position.x) <= attack.attackRange)
         {
-            Debug.Log("aaa");
+            //Debug.Log("aaa");
             //攻击
             isAttak = true;
 

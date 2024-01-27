@@ -45,6 +45,6 @@ public class Boos2SkillController : MonoBehaviour
     public UnityEvent warningEvent;
     public void Text()
     {
-        Debug.Log("aaa");
+        Debug.Log("boss ult warning");
     }
 }

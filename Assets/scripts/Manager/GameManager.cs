@@ -63,7 +63,6 @@ public class GameManager : MonoBehaviour
         GameObject.DontDestroyOnLoad(playerDieUI);
         //Game manager
         DontDestroyOnLoad(gameObject);
-
     }
 
 

@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
 
         Instance = this;    
     }
+
     //注册事件
     void OnEnable()
     {

@@ -7,6 +7,8 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
 
+    //单例
+    public static AudioManager Instance;
     [Header("事件监听")]
     public PlayAudioEventSO FXEvent;
     public PlayAudioEventSO BGMEvent;
@@ -20,7 +22,18 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource JumpSource;
 
+    public void Awake()
+    {
+        if (Instance != null)
+        { 
+            Destroy(this.gameObject);
+        }
 
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
+
+    }
     private void OnEnable()
     {
         //函数注册到事件启动中
