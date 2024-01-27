@@ -21,7 +21,19 @@ public class Boss : Enemy
         // //获得面朝方向通过transfrom.localScale.x的值 负数面朝右边正数面朝左边
         // faceDir = new Vector3(transform.localScale.x, 0, 0);
     }
-
+    //重写FoundPlayer方法
+    public override bool FoundPlayer()
+    {
+        //圆形检测器(位置为当前怪物的坐标，检测范围，检测对象)
+        var obj = Physics2D.OverlapCircle(transform.position, checkDistance, attackLayer);
+        //如果检测到人
+        if (obj)
+        {
+            //把当前的位置赋值给攻击者
+            attacker = obj.transform;
+        }
+        return obj;
+    }
     //死亡方法
     public override void OnDie()
     {

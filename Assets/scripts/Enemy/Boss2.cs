@@ -23,7 +23,7 @@ public class Boss2 : Enemy
     }
 
 
-    //蜜蜂重写FoundPlayer方法
+    //重写FoundPlayer方法
     public override bool FoundPlayer()
     {
         //圆形检测器(位置为当前怪物的坐标，检测范围，检测对象)
