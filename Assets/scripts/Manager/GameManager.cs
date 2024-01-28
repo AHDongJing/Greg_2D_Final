@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     //playerDieUI
     public GameObject playerDieUI;
     //playerBuffUI
-
+    public GameObject buffUI;
     //playerWinUI
 
     //新场景中的相机限制
@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
         GameObject.DontDestroyOnLoad(playerStasUI);
         //player Die UI
         GameObject.DontDestroyOnLoad(playerDieUI);
+        //player buff UI
+        GameObject.DontDestroyOnLoad(buffUI);
         //Game manager
         DontDestroyOnLoad(gameObject);
     }
@@ -95,6 +97,7 @@ public class GameManager : MonoBehaviour
             Destroy(player);
             Destroy(playerStasUI);
             Destroy(playerDieUI);
+            Destroy(buffUI);
             //重新开始游戏时，删除manager 挂在的obj
             Destroy(gameObject);
         }

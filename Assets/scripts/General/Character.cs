@@ -10,6 +10,9 @@ public class Character : MonoBehaviour
     [Header("当前血量")]
     public float currentHealth;
 
+    [Header("玩家技能点")]
+    public int currentManaPoint;
+
     [Header("最大滑铲能量")]
     public float maxPower;
     [Header("当前滑铲能量")]
@@ -36,6 +39,7 @@ public class Character : MonoBehaviour
 
     [Header("死亡")]
     public UnityEvent OnDie;
+
 
     //脚本开始执行时，让当前血量等于最大血量
     private void Start()
