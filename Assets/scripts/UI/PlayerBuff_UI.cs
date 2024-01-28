@@ -45,6 +45,7 @@ public class PlayerBuff_UI : MonoBehaviour
     public void OnPointChange()
     {
         int point = player.GetComponent<Character>().currentManaPoint;
+
         if (point > 0)
         {
             player.GetComponent<Character>().currentManaPoint -= 1;

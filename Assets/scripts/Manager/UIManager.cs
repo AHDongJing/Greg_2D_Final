@@ -11,10 +11,12 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     //用于把血量百分比传递进去,在hierarchy直接把playerStatBar物体拖进去
     public PlayerStatBar playerStatBar;
-    //死亡时的UI
+    //玩家死亡时的UI
     public PlayerDie_UI playerDieUI;
     //玩家buff 
     public PlayerBuff_UI playerBuffUI;
+    //玩家胜利时的UI,即boss 死亡时
+    public PlayerWin_UI playerWinUI;
     //UI 是否打开
     private bool isOn = false;
 
@@ -59,11 +61,17 @@ public class UIManager : MonoBehaviour
         playerStatBar.OnPowerChange(character);
     }
 
-    //死亡时打开死亡UI
+    //角色死亡时打开死亡UI
     public void OnDieEvent()
     { 
         //打开角色死亡时候的UI
         playerDieUI.gameObject.SetActive(true);
+    }
+
+    //Boss2 死亡时打开角色胜利UI
+    public void OnWinEvent()
+    { 
+        playerWinUI.gameObject.SetActive(true);
     }
 
     //打开buffUI

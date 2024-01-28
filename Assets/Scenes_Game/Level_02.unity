@@ -17791,6 +17791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 663631536}
   - component: {fileID: 663631535}
+  - component: {fileID: 663631537}
   m_Layer: 0
   m_Name: $BossManager
   m_TagString: Untagged
@@ -17830,6 +17831,20 @@ Transform:
   - {fileID: 3195599219176287111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663631537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663631534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8024125dee11d4381287438fc8d0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winUI: {fileID: 8274072543418455044}
+  bossHealthUI: {fileID: 884979370181639107}
 --- !u!1 &671368500
 GameObject:
   m_ObjectHideFlags: 0
@@ -36886,6 +36901,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7936b1f587fa3104fadd6b073cd00866, type: 3}
+--- !u!114 &884979370181639107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 523877206379047572, guid: 7936b1f587fa3104fadd6b073cd00866, type: 3}
+  m_PrefabInstance: {fileID: 884979370181639106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792758d3cb419344a9b192749ecb58a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &923657285996090294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38240,6 +38266,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b18521c579e9cf74a912b01320e3972c, type: 3}
+--- !u!114 &8274072543418455044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2500478509143964515, guid: b18521c579e9cf74a912b01320e3972c, type: 3}
+  m_PrefabInstance: {fileID: 8274072543418455043}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e958c7ea7eaa54986afca47a4c94ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8437857545224935604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38313,6 +38350,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 663631536}
     m_Modifications:
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 663631537}
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: OnPlayerWin
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UI_Win_Manager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6182298354081499744, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
       propertyPath: m_Name
       value: Boss2
