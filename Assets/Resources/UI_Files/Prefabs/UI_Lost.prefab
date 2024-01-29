@@ -66,11 +66,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8ab51c1c1a075b24dbae878c9ecca604, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 9e7fb5098a1ae714b8404ee2e4b677e3, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: deth sentence
+  m_Text: 
 --- !u!1 &2287817742703615042
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,11 +363,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8ab51c1c1a075b24dbae878c9ecca604, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 9e7fb5098a1ae714b8404ee2e4b677e3, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: restart
+  m_Text: "\u91CD\u65B0\u5F00\u59CB"
 --- !u!1 &3667820979300942470
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,8 +442,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8ab51c1c1a075b24dbae878c9ecca604, type: 3}
-    m_FontSize: 90
+    m_Font: {fileID: 12800000, guid: afc89e0046cc08b4ca29a53408d44083, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: you lost
+  m_Text: "\u6218\u6597\u5931\u8D25"
 --- !u!1 &3902648941684136047
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,11 +614,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8ab51c1c1a075b24dbae878c9ecca604, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 9e7fb5098a1ae714b8404ee2e4b677e3, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -626,7 +626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: exist
+  m_Text: "\u9000\u51FA\u6E38\u620F"
 --- !u!1 &8084447615856174674
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,4 +947,3 @@ MonoBehaviour:
   exitBtn: {fileID: 4142882021428257216}
   textAnim: {fileID: 1221434957011863188}
   textContent: you lost, but no worries, keep practice, good luck
-  anim: {fileID: 0}

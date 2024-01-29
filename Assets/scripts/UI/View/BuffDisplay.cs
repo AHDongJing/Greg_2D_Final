@@ -24,7 +24,7 @@ public class BuffDisplay : MonoBehaviour
         //获得buff 显示信息
         string buffDiscriptionText = buffView.BuffData.info;
         //在对话框中显示buff 信息
-        tween = buffDiscription.DOText(buffDiscriptionText,1,true).SetRelative().SetEase(Ease.Linear).SetAutoKill(true);
+        tween = buffDiscription.DOText(buffDiscriptionText,0.5f,true).SetRelative().SetEase(Ease.Linear).SetAutoKill(true);
         tween.Play();
 
     }
