@@ -820,7 +820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &43263809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17845,6 +17845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winUI: {fileID: 8274072543418455044}
   bossHealthUI: {fileID: 884979370181639107}
+  minionTime: 0
 --- !u!1 &671368500
 GameObject:
   m_ObjectHideFlags: 0
@@ -34478,6 +34479,96 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1010033306637880042, guid: d9adea7bb190a4f679b0fbc9b6c7fb1a, type: 3}
   m_PrefabInstance: {fileID: 1888621833}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1890331503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1890331506}
+  - component: {fileID: 1890331505}
+  - component: {fileID: 1890331504}
+  m_Layer: 0
+  m_Name: BossFightTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1890331504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890331503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec858d0fe8f90e94d93311d26266de91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1890331505
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890331503}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3286171, y: 1.9208336}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6572342, y: 4.643255}
+  m_EdgeRadius: 0
+--- !u!4 &1890331506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890331503}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.13, y: -14.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1900571171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 691784387458415908, guid: 3762674e909dede4b929bf8937f71366, type: 3}
@@ -38351,6 +38442,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 663631536}
     m_Modifications:
     - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609320242537797790, guid: 89f2ee1717aad424ca30e806220c5def, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -38547,3 +38642,4 @@ SceneRoots:
   - {fileID: 1153214104}
   - {fileID: 1256352037}
   - {fileID: 2118470853}
+  - {fileID: 1890331506}

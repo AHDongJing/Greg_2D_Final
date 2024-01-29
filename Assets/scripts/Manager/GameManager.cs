@@ -97,6 +97,8 @@ public class GameManager : MonoBehaviour
 
         //重新加载当前场景
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //重新记时
+        playerStasUI.GetComponent<PlayerStatBar>().isPause = false;
     }
 
     //退出游戏

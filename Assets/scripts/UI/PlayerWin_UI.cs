@@ -29,7 +29,7 @@ public class PlayerWin_UI : MonoBehaviour
     {
         //播放动画
         anim.CrossFade("UI_Win", 0, 0);
-        //显示进度条
+        //显示时间进度条
         //buff 展示
 
     }
