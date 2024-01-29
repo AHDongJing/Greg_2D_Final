@@ -31,10 +31,17 @@ public class GameManager : MonoBehaviour
     {
         if(Instance != null) 
         {
+            //清楚场景中已经存在的obj
+            Destroy(Instance.mainCamera);
+            Destroy(Instance.player);
+            Destroy(Instance.playerStasUI);
+            Destroy(Instance.playerDieUI);
+            Destroy(Instance.buffUI);
             Destroy(this);
         }
-        Instance = this;
 
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
         //初始化游戏
         InitNewSceneObj();
     }
@@ -63,8 +70,6 @@ public class GameManager : MonoBehaviour
         GameObject.DontDestroyOnLoad(playerDieUI);
         //player buff UI
         GameObject.DontDestroyOnLoad(buffUI);
-        //Game manager
-        DontDestroyOnLoad(gameObject);
     }
 
 
@@ -90,17 +95,6 @@ public class GameManager : MonoBehaviour
             playerDieUI.SetActive(false);
         }
 
-        //清除场景内之前保留的obj
-        else
-        {
-            Destroy(mainCamera);
-            Destroy(player);
-            Destroy(playerStasUI);
-            Destroy(playerDieUI);
-            Destroy(buffUI);
-            //重新开始游戏时，删除manager 挂在的obj
-            Destroy(gameObject);
-        }
         //重新加载当前场景
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
