@@ -13,6 +13,7 @@ TagManager:
   - SwordDismiss
   - Boss
   - Portal
+  - Boundary
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Player
   - Ground
   - Enemy
-  - 
+  - Boundary
   - 
   - 
   - 

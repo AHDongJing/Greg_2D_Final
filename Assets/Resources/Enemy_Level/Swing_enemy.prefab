@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 4315468125368276191}
   - component: {fileID: 4090948055203928465}
   - component: {fileID: 9132998107914203207}
+  - component: {fileID: 3873390960708436812}
   m_Layer: 0
   m_Name: WoodGear_Danger_09
   m_TagString: Untagged
@@ -494,6 +495,21 @@ CircleCollider2D:
   m_Offset: {x: -0.0058584213, y: -0.0071849823}
   serializedVersion: 2
   m_Radius: 0.6183058
+--- !u!114 &3873390960708436812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5690117582867469313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a60383954484630bc5280268122853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  attackRange: 0
+  attackRate: 0
 --- !u!1 &7161919769325228089
 GameObject:
   m_ObjectHideFlags: 0
