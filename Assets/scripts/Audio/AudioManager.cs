@@ -22,11 +22,18 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource JumpSource;
 
+    //暂时引用
+    [Header("背景音效")]
+    public AudioSource backgroundSource;
+    public AudioClip backgroundClip;
+
+
     public void Awake()
     {
         if (Instance != null)
         { 
-            Destroy(this.gameObject);
+         Destroy(this.gameObject);
+           
         }
 
         Instance = this;
@@ -48,6 +55,7 @@ public class AudioManager : MonoBehaviour
         BGMEvent.OnEventRaised -= OnBGMEvent;
         JumpEvent.OnEventRaised -= OnJumpEvent;
     }
+
 
     //bgm音频
     private void OnBGMEvent(AudioClip clip)
