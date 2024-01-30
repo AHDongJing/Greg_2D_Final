@@ -25,10 +25,12 @@ public class UIManager : MonoBehaviour
     {
         if (Instance != null)
         { 
-            Destroy(Instance );
+            Destroy(Instance);
+            return;
         }
 
-        Instance = this;    
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     //注册事件

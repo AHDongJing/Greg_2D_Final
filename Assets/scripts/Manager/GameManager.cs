@@ -37,11 +37,18 @@ public class GameManager : MonoBehaviour
             Destroy(Instance.playerStasUI);
             Destroy(Instance.playerDieUI);
             Destroy(Instance.buffUI);
-            Destroy(this);
+            Destroy(Instance.gameObject);           
+            return;
         }
 
         Instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        Instance.mainCamera = this.mainCamera;
+        Instance.player = this.player;
+        Instance.playerStasUI = this.playerStasUI;
+        Instance.playerDieUI = this.playerDieUI;
+        Instance.buffUI = this.buffUI;
+
+        DontDestroyOnLoad(gameObject);
         //≥ı ºªØ”Œœ∑
         InitNewSceneObj();
     }
