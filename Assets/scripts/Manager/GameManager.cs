@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
     public GameObject playerDieUI;
     //playerBuffUI
     public GameObject buffUI;
-    //playerWinUI
-
     //新场景中的相机限制
     public GameObject nextSceneConfiner;
     
