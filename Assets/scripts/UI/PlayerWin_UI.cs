@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerWin_UI : MonoBehaviour
 {
-
+    //animation
+    private Animator anim;
     private void OnEnable()
     {
-        Debug.Log("Win UI Open");
+        //定位animator
+        anim = gameObject.GetComponentInChildren<Animator>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnOpen();
     }
 
     // Update is called once per frame
@@ -20,4 +22,16 @@ public class PlayerWin_UI : MonoBehaviour
     {
         
     }
+
+    //需要在UI打开时执行
+    //----后期需要用接口或抽象类进行重写
+    private void OnOpen() 
+    {
+        //播放动画
+        anim.CrossFade("UI_Win", 0, 0);
+        //显示时间进度条
+        //buff 展示
+
+    }
+
 }

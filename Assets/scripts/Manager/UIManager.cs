@@ -15,11 +15,8 @@ public class UIManager : MonoBehaviour
     public PlayerDie_UI playerDieUI;
     //玩家buff 
     public PlayerBuff_UI playerBuffUI;
-    //玩家胜利时的UI,即boss 死亡时
-    public PlayerWin_UI playerWinUI;
-    //UI 是否打开
-    private bool isOn = false;
-
+    //buff ui 是否已打开
+    public bool isOn = false;
 
     [Header("事件监听")]
     public CharacterEventSO healthEvent;
@@ -28,10 +25,12 @@ public class UIManager : MonoBehaviour
     {
         if (Instance != null)
         { 
-            Destroy(Instance );
+            Destroy(Instance);
+            return;
         }
 
-        Instance = this;    
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     //注册事件
@@ -66,12 +65,6 @@ public class UIManager : MonoBehaviour
     { 
         //打开角色死亡时候的UI
         playerDieUI.gameObject.SetActive(true);
-    }
-
-    //Boss2 死亡时打开角色胜利UI
-    public void OnWinEvent()
-    { 
-        playerWinUI.gameObject.SetActive(true);
     }
 
     //打开buffUI

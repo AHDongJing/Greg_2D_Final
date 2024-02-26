@@ -19,8 +19,9 @@ public class PlayerStatBar : MonoBehaviour
 
     //显示游戏时间
     public Text timeText;
-    float elapsedTime;
-
+    public float elapsedTime;
+    //是否停止记时
+    public bool isPause = false;
     private void Update()
     {
         //记时
@@ -63,13 +64,21 @@ public class PlayerStatBar : MonoBehaviour
     //显示游戏时间
     public void OnTimeChange() 
     {
-        //计算游戏时间
-        elapsedTime += Time.deltaTime;
-        int min = Mathf.FloorToInt(elapsedTime / 60);
-        int sec = Mathf.FloorToInt(elapsedTime % 60);
-        //将时间转化为string
-        timeText.text = string.Format("{0:00}:{1:00}", min, sec);
+        if (!isPause)
+        {
+            //计算游戏时间
+            elapsedTime += Time.deltaTime;
+            int min = Mathf.FloorToInt(elapsedTime / 60);
+            int sec = Mathf.FloorToInt(elapsedTime % 60);
+            //将时间转化为string
+            timeText.text = string.Format("{0:00}:{1:00}", min, sec);
+        }
+
+        else
+            return;
     }
+
+
 
 
 }

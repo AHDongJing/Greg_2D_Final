@@ -22,10 +22,6 @@ public class PlayerDie_UI : MonoBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
-        //restart 按钮事件
-        restartBtn.onClick.AddListener(GameManager.Instance.RestartGame);
-        //exit 按钮事件
-        exitBtn.onClick.AddListener(GameManager.Instance.ExitGame);
         //定位animator
         anim = gameObject.GetComponentInChildren<Animator>();
     }
@@ -50,10 +46,6 @@ public class PlayerDie_UI : MonoBehaviour
         anim.CrossFade("Die_Animation", 0, 0);
     }
 
-    private void OnDisable()
-    {
-        restartBtn.onClick.RemoveAllListeners();
-        exitBtn.onClick.RemoveAllListeners();
-    }
+    
 
 }

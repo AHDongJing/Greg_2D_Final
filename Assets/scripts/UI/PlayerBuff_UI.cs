@@ -55,7 +55,7 @@ public class PlayerBuff_UI : MonoBehaviour
             return;
         }
 
-        manaText.text = point.ToString() + " point left";
+        manaText.text = " £”‡ " + point.ToString() + " µ„BUFF";
 
     }
 }

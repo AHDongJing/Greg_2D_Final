@@ -77,7 +77,8 @@ public class Character : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         //查找标签为水面
-        if (other.CompareTag("Water"))
+        //检查标签为边界
+        if (other.CompareTag("Water") || other.CompareTag("Boundary"))
         {
 
             //血量更新事件
@@ -88,6 +89,7 @@ public class Character : MonoBehaviour
         }
 
     }
+
 
     //接收伤害方法
     public void TakeDamage(Attack attacker)

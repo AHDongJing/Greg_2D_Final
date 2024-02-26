@@ -16,6 +16,7 @@ public class ObjectPoolManager
                 instance = new ObjectPoolManager();
             return instance;
         }
+        
     }
     private ObjectPoolManager()
     {

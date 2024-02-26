@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: BuffData
   m_EditorClassIdentifier: 
   buffs:
-  - name: Buff1
+  - name: "\u81EA\u7136\u4E4B\u6108"
     costPoint: 1
-    info: Buff1 text test
-  - name: Buff2
+    info: "\u81EA\u7136\u4E4B\u6108\uFF1A\u53EC\u5524\u81EA\u7136\u4E4B\u529B\uFF0C\u589E\u52A0\u89D2\u8272\u751F\u547D\u4E0A\u9650"
+  - name: "\u6811\u7075\u4E4B\u76FE"
     costPoint: 1
-    info: Buff2 text test
-  - name: Buff2
+    info: "\u6811\u7075\u4E4B\u76FE\uFF1A\u53EC\u5524\u81EA\u7136\u4E4B\u529B\u7684\u62A4\u76FE\uFF0C\u63D0\u9AD8\u89D2\u8272\u9632\u5FA1\u529B"
+  - name: "\u98CE\u66B4\u4E4B\u6012"
     costPoint: 1
-    info: Buff3 text test
+    info: "\u53EC\u5524\u98CE\u66B4\u4E4B\u529B\uFF1A\u589E\u52A0\u4F60\u7684\u653B\u51FB\u8DDD\u79BB"
