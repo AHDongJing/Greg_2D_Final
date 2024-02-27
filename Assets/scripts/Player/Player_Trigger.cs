@@ -21,11 +21,9 @@ public class Player_Trigger : MonoBehaviour
         
     }
 
-    //角色触发可交互物品
-    //宝箱，传送门
     private void OnTriggerStay2D(Collider2D other)
     {
-        //如果触发传送门，进入到下一个场景
+
         if (other.CompareTag("Portal"))
         {
             //Load scene
@@ -34,15 +32,14 @@ public class Player_Trigger : MonoBehaviour
         }
     }
 
-    //触发加载场景
+
     IEnumerator MoveToNextScene()
     {
-        //播放专场动画
+
         transitionAnim.SetActive(true);
         yield return new WaitForSeconds(2);
         transform.parent.position = GameManager.Instance.nextLevelPos;
-        //设置玩家在新场景中的位置坐标
-        //设置相机在新场景的confiner
+
         Camera.main.transform.Find("VC").GetComponent<CinemachineConfiner2D>().m_BoundingShape2D = GameManager.Instance.nextSceneConfiner.GetComponent<PolygonCollider2D>();
     }
 
