@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
-//Íæ¼Òbuff Êý¾Ý
+//ï¿½ï¿½ï¿½buff ï¿½ï¿½ï¿½ï¿½
 [System.Serializable]
 public class BuffData
 {
-    //buff Ãû×Ö
+    //buff ï¿½ï¿½ï¿½ï¿½
     public string name;
-    //buff ÐèÒªÏûºÄµãÊý
+    //buff ï¿½ï¿½Òªï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½
     public int costPoint;
-    //buff ½éÉÜ
+    //buff ï¿½ï¿½ï¿½ï¿½
     public string info;
 
-    //¹¹Ôìº¯Êý
+    //ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
     public BuffData(string name, int costPoint, string info)
     { 
         this.name = name;
